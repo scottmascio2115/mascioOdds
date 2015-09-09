@@ -28,6 +28,10 @@ class Game < ActiveRecord::Base
     adjusted_percentage = score - ((score) * percentage)
   end
 
+  def favorite
+    home_team.confidence_score.score > away_team.confidence_score.score ? home_team.name : away_team.name
+  end
+
   private
 
   def percentage(over_under)

@@ -8,7 +8,9 @@
     %td #{game.home_team.confidence_score.try(:score)}
     %td #{game.away_team.confidence_score.try(:score)}
     %td #{number_to_percentage(game.calculate_overall_score, precision: 2)}
+    %td #{game.favorite}
   - else
+    %td
     %td
     %td
     %td

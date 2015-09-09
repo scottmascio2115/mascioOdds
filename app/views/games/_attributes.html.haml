@@ -1,8 +1,8 @@
 %tr
   %td #{game_header(game)}
   %td #{game.over_under}
-  %td #{game.home_team.name}
-  %td #{game.away_team.name}
+  %td #{game.home_team.try(:name)}
+  %td #{game.away_team.try(:name)}
   %td #{game.divison_game}
   %td #{game.home_team.confidence_score.try(:score)}
   %td #{game.away_team.confidence_score.try(:score)}

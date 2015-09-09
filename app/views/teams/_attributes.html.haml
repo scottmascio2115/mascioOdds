@@ -1,0 +1,11 @@
+%tr
+  %td #{team.name}
+  %td #{team.division}
+  %td #{team.games_won}
+  %td #{team.games_lost}
+  %td #{team.streak}
+  %td #{team.record}
+  %td #{team.home}
+  %td #{team.spread}
+  %td
+    = link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_team_path(team)

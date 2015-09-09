@@ -1,0 +1,50 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$navbar-default-bg: #002244;
+$navbar-default-link-color: #FFF;
+$navbar-border-radius: none;
+$navbar-default-brand-hover-color: none;
+$navbar-default-brand-hover-bg: none;
+$navbar-default-link-hover-color: none;
+$btn-default-color: #002244;
+
+$state-info-text: #FFF !default;
+$state-info-bg: #002244 !default;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 5%) !default;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.tablesorter-header-inner{
+  color: #002244;
+  font-weight: 200;
+}
+
+i{
+  color: #002244
+}
+
+.btn{
+  margin-bottom: 20px;
+}
+
+ul
+{
+    list-style-type: none;
+}
+

@@ -1,0 +1,17 @@
+.row
+  .col-md-12
+    %table.myteamTable.tablesorter.small-margin-top.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th Name
+          %th Division
+          %th Games Won
+          %th Games Lost
+          %th Streak
+          %th Record
+          %th Home?
+          %th Spread
+          %th Edit
+        %tbody
+        - teams.each do |team|
+          = render 'teams/attributes', team: team

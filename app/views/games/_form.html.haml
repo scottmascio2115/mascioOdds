@@ -1,0 +1,7 @@
+= simple_form_for game do |f|
+  = f.association :home_team, :label_method => lambda { |team| "#{team.name} - #{team.division}" }
+  = f.association :away_team, :label_method => lambda { |team| "#{team.name} - #{team.division}" }
+  = f.input :over_under
+  = f.input :divison_game
+  = f.submit "Save", class: 'btn btn-default'
+  = link_to "Cancel", games_path, class: 'btn btn-default'

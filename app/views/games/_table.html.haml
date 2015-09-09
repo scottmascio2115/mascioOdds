@@ -1,0 +1,17 @@
+.row
+  .col-md-12
+    %table.myteamTable.tablesorter.small-margin-top.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th Home vs. Away
+          %th Over Under
+          %th Home Team
+          %th Away Team
+          %th Divison Game
+          %th Home Team C Score
+          %th Away Team C Score
+          %th Overall Score
+          %th Edit
+        %tbody
+        - games.each do |game|
+          = render 'attributes', game: game

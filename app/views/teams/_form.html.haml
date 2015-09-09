@@ -1,0 +1,8 @@
+= simple_form_for team do |f|
+  = f.input :games_won
+  = f.input :games_lost
+  = f.input :streak
+  = f.input :home
+  = f.input :spread
+  = f.submit "Save", class: 'btn btn-default'
+  = link_to 'Cancel', root_path, class: 'btn btn-default'

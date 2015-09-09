@@ -1,0 +1,2 @@
+module ConfidenceScoresHelper
+end

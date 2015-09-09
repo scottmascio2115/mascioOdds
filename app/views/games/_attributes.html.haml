@@ -4,8 +4,8 @@
   %td #{game.home_team.try(:name)}
   %td #{game.away_team.try(:name)}
   %td #{game.divison_game}
-  %td #{game.home_team.confidence_score.try(:score)}
-  %td #{game.away_team.confidence_score.try(:score)}
-  %td #{number_to_percentage(game.calculate_overall_score, precision: 2)}
+  %td #{game.home_team.try(:confidence_score).try(:score)}
+  %td #{game.away_team.try(:confidence_score).try(:score)}
+  %td #{number_to_percentage(game.try(:calculate_overall_score), precision: 2)}
   %td
     = link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_game_path(game)

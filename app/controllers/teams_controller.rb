@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
 
   before_action :set_team, except: [:index, :new, :create]
+  respond_to :js
 
   def index
     @teams = Team.order(games_won: :desc)

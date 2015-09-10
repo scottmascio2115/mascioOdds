@@ -21,6 +21,10 @@ class Team < ActiveRecord::Base
     jets.update_attribute(:name, "NY Jets") if jets
   end
 
+  def remove_spaces
+    name.delete(' ')
+  end
+
   def record
     "#{games_won} - #{games_lost}"
   end

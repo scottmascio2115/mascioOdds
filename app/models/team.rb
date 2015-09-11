@@ -30,7 +30,7 @@ class Team < ActiveRecord::Base
   end
 
   def set_home_away_points
-    points = 7 if home?
+    points = 11 if home?
     confidence_score.score += points if points
   end
 

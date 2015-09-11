@@ -16,6 +16,7 @@ class Game < ActiveRecord::Base
         t.win_points
         t.loss_points
         t.set_divion_points
+        t.rookie_qbs
         t.confidence_score.score += 100
         t.save
       end

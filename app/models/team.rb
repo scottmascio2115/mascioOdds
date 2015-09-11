@@ -25,6 +25,13 @@ class Team < ActiveRecord::Base
     name.delete(' ')
   end
 
+  def rookie_qbs
+    if name == "Tampa Bay Buccaneers" || name == "Tennessee Titans"
+      points = 11
+      confidence_score.score -= points if points
+    end
+  end
+
   def record
     "#{games_won} - #{games_lost}"
   end

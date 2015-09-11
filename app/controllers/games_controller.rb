@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
 
   before_action :set_game, except: [:index, :create, :new]
+  respond_to :js
 
   def index
     @games = Game.all

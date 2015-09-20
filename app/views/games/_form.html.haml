@@ -1,7 +1,17 @@
-= simple_form_for game do |f|
-  = f.association :home_team, :label_method => lambda { |team| "#{team.name} - #{team.division}" }
-  = f.association :away_team, :label_method => lambda { |team| "#{team.name} - #{team.division}" }
-  = f.input :over_under
-  = f.input :divison_game
-  = f.submit "Save", class: 'btn btn-default'
-  = link_to "Cancel", games_path, class: 'btn btn-default'
+.modal-dialog
+  .modal-content
+    .modal-header
+      %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+        %span{"aria-hidden" => "true"} &times;
+      %h1.skinny-font New Game
+    .modal-body
+      %ul.errors
+      = simple_form_for game, remote:true do |f|
+        .container.new-form.game-form-width
+          .row
+          = f.association :home_team, :label_method => lambda { |team| "#{team.name} - #{team.division}" }
+          = f.association :away_team, :label_method => lambda { |team| "#{team.name} - #{team.division}" }
+          = f.input :over_under
+          = f.input :divison_game
+          = f.submit "Save", class: 'btn btn-default'
+          = link_to 'Cancel', :games, class: 'btn btn-default pull-right game-form-cancel'

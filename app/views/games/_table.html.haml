@@ -1,6 +1,6 @@
 .row
   .col-md-12
-    %table.myteamTable.tablesorter.small-margin-top.table.table-striped.table-bordered
+    %table.myteamTable.tablesorter.small-margin-top.table.table-striped.table-bordered#games
       %thead
         %tr
           %th Home vs. Away
@@ -12,7 +12,7 @@
           %th Away Team C Score
           %th Overall Score
           %th Favorite
-          %th Edit
+          %th Delete
         %tbody
         - games.each do |game|
           = render 'attributes', game: game

@@ -15,4 +15,4 @@
     %td
     %td
   %td
-    = link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_game_path(game)
+    = link_to '<i class="fa fa-ban"></i>'.html_safe, game_path(game), data: {confirm: 'Are you sure?'}, method: :delete
